@@ -1,0 +1,19 @@
+<html ng-app="catApp">
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/app.css">
+        <script src="js/angular.min.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+        <div class="container" ng-controller="CatController as cat">
+            <div class="row">
+                <div class="col-lg-3">
+                    <h2>Cick the cat!</h2>
+                    <img src="image/octocat.png" class="cat" ng-click="cat.click()">
+                    <h3>You've clicked {{cat.clicks}} time(s)!</h3>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
