@@ -1,4 +1,31 @@
 .cat{
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 250px;
+    cursor: pointer;
+}
+
+.preview{
+    list-style: none;
+    height: 90px;
+}
+
+    .preview li{
+        display: inline;
+        cursor: pointer;
+    }
+
+    .preview li img{
+        height: 50px;
+        width: 50px;
+        margin: 20px;
+    }
+
+        .preview li img:hover{
+            height: 90px;
+            width: 90px;
+            margin: 0px;
+        }
+
+.cat-details{
+    margin-top: 80px;
 }
