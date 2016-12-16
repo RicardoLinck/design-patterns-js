@@ -6,12 +6,12 @@
         <script src="js/app.js"></script>
     </head>
     <body>
-        <div class="container" ng-controller="CatController as cat">
-            <div class="row">
-                <div class="col-lg-3">
-                    <h2>Cick the cat!</h2>
+        <div class="container" ng-controller="CatController as catCtrl">
+            <div class="row" >
+                <div class="col-lg-4" ng-repeat="cat in catCtrl.cats">
+                    <h2>I'm {{cat.name}}! Click me!</h2>
                     <img src="image/octocat.png" class="cat" ng-click="cat.click()">
-                    <h3>You've clicked {{cat.clicks}} time(s)!</h3>
+                    <h3>You've clicked {{cat.name}} {{cat.clicks}} time(s)!</h3>
                 </div>
             </div>
         </div>
