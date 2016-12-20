@@ -18,12 +18,12 @@
             </div>
             <div class="row" >
                 <div class="col-lg-6 ">
-                    <img ng-src="{{catCtrl.selectedCat.imageSource}}" class="cat pull-right" ng-click="catCtrl.selectedCat.click()">
+                    <img ng-src="{{catCtrl.selectedCat.imageSource}}" class="cat pull-right" ng-click="catCtrl.incrementCatCounter(catCtrl.selectedCat)">
                 </div>
                 <div class="col-lg-6">
                     <div class="m-t-10 cat-details">
                         <h2>I'm {{catCtrl.selectedCat.name}}! Click me!</h2>
-                        <h3>You've clicked {{catCtrl.selectedCat.name}} {{catCtrl.selectedCat.clicks}} time(s)!</h3>
+                        <h3>You've clicked {{catCtrl.selectedCat.name}} {{catCtrl.selectedCat.clickCounter}} time(s)!</h3>
                     </div>
                 </div>
             </div>
