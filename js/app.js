@@ -29,7 +29,7 @@
             this.isAdminModeVisible = false;
         }
 
-        this.cancelAdminMode = function(){
+        this.hideAdminMode = function(){
             this.isAdminModeVisible = false;
         }
     });
