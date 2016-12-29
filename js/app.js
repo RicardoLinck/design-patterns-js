@@ -3,12 +3,11 @@
 
     app.controller('CatController', function(){
         this.cats = model;
-        this.selectedCat = this.cats[0];
         this.selectedCatAdmin;
         this.isAdminModeVisible = false;
 
-        this.selectCat = function(index){
-            this.selectedCat = this.cats[index];
+        this.selectCat = function(cat){
+            this.selectedCat = cat;
             this.isAdminModeVisible = false;
             this.selectedCatAdmin = null;
         }
@@ -35,7 +34,7 @@
     });
 
     var model = [
-            new Cat('John', 'image/octocat.png'),
+            new Cat('Adam', 'image/octocat.png'),
             new Cat('Mike', 'image/octocat2.jpg'),
             new Cat('Robert', 'image/octocat3.jpg'),
             new Cat('Dave', 'image/octocat4.png'),

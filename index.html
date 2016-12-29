@@ -10,13 +10,13 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <ul class="preview">
-                        <li ng-repeat="cat in catCtrl.cats">
-                            <img ng-src="{{cat.imageSource}}" alt="{{cat.name}}" title="{{cat.name}}" ng-click="catCtrl.selectCat($index)">
+                        <li ng-repeat="cat in catCtrl.cats | orderBy:'name'">
+                            <img ng-src="{{cat.imageSource}}" alt="{{cat.name}}" title="{{cat.name}}" ng-click="catCtrl.selectCat(cat)">
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="row" >
+            <div class="row" ng-if="catCtrl.selectedCat">
                 <div class="col-lg-6 ">
                     <img ng-src="{{catCtrl.selectedCat.imageSource}}" class="cat pull-right" ng-click="catCtrl.incrementCatCounter(catCtrl.selectedCat)">
                 </div>
@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" ng-if="catCtrl.selectedCat">
                 <div class="col-lg-6">
                     <button class="btn btn-primary btn-admin pull-right" ng-click="catCtrl.showAdminMode(catCtrl.selectedCat)">Admin</button>
                 </div>
